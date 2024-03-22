@@ -39,7 +39,7 @@ $ composer require m3m0r7/ez-door-sign
 
 ### Quick start
 
-#### Refresh device
+#### Refresh the device
 
 ```php
 <?php
@@ -137,6 +137,23 @@ $manipulator
         // Specify slot number (0-4)
         0,
     );
+
+```
+
+#### Get logging
+
+
+```php
+// ... do something
+
+$ezDoorSign = new EzDoorSign(
+    $libusb,
+    // You can specify logger in the 2nd parameter of the EzDoorSign class's constructor.
+    (new Logger('log'))
+        ->pushHandler(new StreamHandler(STDOUT, Level::Info)),
+);
+
+// ... do something
 
 ```
 
