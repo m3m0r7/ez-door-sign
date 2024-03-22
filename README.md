@@ -126,7 +126,7 @@ $manipulator
         // Specify rendering an image is here (only support image path currently)
         new Canvas(new \EzDoorSign\Renderer\ImageRenderer(__DIR__ . '/tests/example.jpg')),
 
-        // If you want to render a text, then comment-in below code and do comment-out starting with `new Image(new \EzDoorSign\Renderer\ImageRenderer(...)),` in above.
+        // If you want to render a text, then comment-in below code and do comment-out starting with `new Canvas(new \EzDoorSign\Renderer\ImageRenderer(...)),` in above.
         // new Canvas(new \EzDoorSign\Renderer\TextRenderer('Hello World!', '/path/to/your-fornts.ttf'))
 
         // Specify rendering options
