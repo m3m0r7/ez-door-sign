@@ -56,7 +56,7 @@ bb 00 05 04 00 01 01 27 32 7e
 
 ```
 
-### Render an image (書き込み後更新パケットを送る必要あり)
+### Render an image
 
 *You must send refresh packet after rendered an image.*
 
