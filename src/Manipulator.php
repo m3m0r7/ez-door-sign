@@ -125,10 +125,9 @@ class Manipulator implements ManipulatorInterface
     {
         $packet = current(
             $this->bulkTransferManipulator
-                ->receive($size) !== [] ? $this->bulkTransferManipulator
-                ->receive($size) : throw new FailedToReceive(
-                    'Failed to receive packets from the device',
-                ),
+                ->receive($size)
+        ) ?: throw new FailedToReceive(
+            'Failed to receive packets from the device',
         );
 
         $this->logger->debug(sprintf('Received packet [%s]', Formatter::toHexFromString($packet)));

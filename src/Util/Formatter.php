@@ -14,7 +14,7 @@ class Formatter
         return implode(
             $delimiter,
             array_map(
-                static fn(int $number) => sprintf('%02X', $number),
+                static fn (int $number) => sprintf('%02X', $number),
                 $array,
             ),
         );
